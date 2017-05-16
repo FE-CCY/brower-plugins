@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset=utf-8>
+    <meta http-equiv=Content-Type content="text/html; charset=UTF-8">
+    <meta http-equiv=X-UA-Compatible content=edge>
+    <meta name=viewport content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <meta content="telephone=no" name=format-detection>
+    <title>淘A微信公众号广告助手</title>
+</head>
+
+<body>
+    
+    <div id="j-app" class="wrapper" style="opacity: 0">
+        <a class="logo" target="_blank" href="http://www.taoooa.com"><img src="/assets/img/logo.png" alt="淘A"></a>
+
+            <form v-on:submit.prevent="login" @ v-if="!loginStatus" class="login-form" key="login">
+                <ul>
+                    <li>
+                        <label>
+                        <input name="user" v-model="account" placeholder="手机号 / 邮箱" type="text">
+                        <i class="iconfont">&#xe60e;</i>
+                    </label>
+                    </li>
+                    <li>
+                        <label>
+                        <input name="pwd" v-model="password" placeholder="请输入密码" type="password">
+                        <i class="iconfont">&#xe68b;</i>
+                    </label>
+                    </li>
+                    <li>
+                        <button type="submit" class="ui-btn" >登 录</button>
+                        <p class="error-msg" v-text="errorMsg"></p>
+                    </li>
+                </ul>
+                <p class="tc"><a target="_blank" href="http://www.taoooa.com/pwdreset">忘记密码</a> <span class="ml5 mr5"> | </span> <a target="_blank" href="http://www.taoooa.com/register">注册帐号</a></p>
+            </form>
+            <div v-else class="user-info" key="user">
+                <a href="javascript:;" class="avatar" ><img :src="user.avatar" alt=""></a>
+                <p class="user">{{user.account}}</p>
+                <ul class="detail-list">
+                    <li>
+                        <i class="iconfont">&#xe627;</i>
+                        <p>推广：<span  class="orange">{{user.advCount}}</span> 个</p>
+                    </li>
+                     <li>
+                        <i class="iconfont">&#xe6ed;</i>
+                        <p>总收入：<span class="orange">{{user.total}}</span> 元</p>
+                    </li>
+                    <li>
+                        <i class="iconfont">&#xe618;</i>
+                        <p>余额：<span class="orange">{{user.balance}}</span> 元</p>
+                    </li>
+
+                </ul>
+            <button type="button" class="ui-btn" @click="logout">退出登录</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

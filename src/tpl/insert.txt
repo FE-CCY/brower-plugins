@@ -1,0 +1,12 @@
+<script>
+$(function(){
+    $("#j-editorAdTpl").on("insertHtml",function(){
+        var html = $.trim($("#j-editorAdTpl").val());
+        if(html.length && window.UE){
+            var editor = UE.instants["ueditorInstant0"];
+            editor.focus();  
+            editor.execCommand("inserthtml",html); 
+        }
+    })
+})
+</script>

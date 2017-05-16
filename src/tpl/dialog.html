@@ -1,0 +1,22 @@
+<div id="j-taAdDialog" class="ad-list-wrap">
+    <ul class="ad-list">
+        <li v-for="(item, index) in adList">
+            <a href="javascript:;" @click="toggleSelected(index)" :class="{selected:selectedIndex === index}">
+                <span v-text="item.name"></span>
+                <img :src="item.advimg" alt="">
+                <i class="selected-mask iconfont">&#xe720;</i>
+            </a>
+        </li>
+        <li>
+            <a class="iconfont taoooa-more" href="http://www.taoooa.com" target="_blank" title="更多广告">&#xe678;</a>
+        </li>
+    </ul>
+
+    <div class="ta-btns-group">
+        <span class="selected-tip">
+            我的推广：<i class="selected-count" v-text="adList.length"></i> 个
+        </span>
+        <span @click="confirm" class="btn btn_input btn_primary"><button type="button">确定</button></span>
+        <span @click="cancel"  class="btn btn_input btn_default"><button type="button">取消</button></span>
+    </div>
+</div>

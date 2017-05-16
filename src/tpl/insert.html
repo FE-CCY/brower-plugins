@@ -1,0 +1,12 @@
+{{each selected}}
+{{if $value.txt}}
+<blockquote style="margin:1em;">
+    <p style="font-size: 16px; line-height: 1.5; color: #bbb;">{{$value.txt}}</p>
+</blockquote>
+{{/if}}
+<p>
+    <a href="{{@$value.advurl}}">
+    <img class="taoooa" data-type="{{$value.format}}" src="{{$value.img}}" style="width: 100%; height: auto;" />
+    </a>
+</p>
+{{/each}}
