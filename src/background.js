@@ -1,6 +1,6 @@
 import $ from 'jquery';
 const debug = process.env.NODE_ENV !== 'production';
-const host = debug ? 'http://192.168.31.121/taoapi/index.php' : 'http://api.hikingnet.cn/index.php';
+const host = debug ? '' : 'http://api.hikingnet.cn/index.php';
 
 var ADV_LIST_URL = host + '/Aplus/advList';
 var POST_ARTICLE_URL = host + '/Aplus/submitArticle';
