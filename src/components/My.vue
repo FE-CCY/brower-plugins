@@ -98,7 +98,7 @@
         margin: 20px 0;
         li{
             display: inline-block;
-            width: 90px;
+            width: 88px;
             height: 70px;
             i{
                 font-size: 30px;

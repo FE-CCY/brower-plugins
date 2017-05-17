@@ -46,7 +46,6 @@ export default {
         background:#f1f1f1;
     }
     html,body{
-        font-family: PingFang SC,Source Sans Pro,Hiragino Sans GB,Helvetica Neue,Helvetica,Microsoft Yahei,arial,sans-serif;
         font-size: 12px;
         line-height: 1.25;
         color: #555;

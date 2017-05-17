@@ -21,6 +21,7 @@
 </script>
 
 <style lang="less" scoped>
+
     #wrap{
         padding-left:40px;
         box-sizing:border-box;

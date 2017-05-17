@@ -1,0 +1,36 @@
+{
+    "name": "淘A微信公众号广告助手",
+    "version": "1.0.5",
+    "manifest_version": 2,
+    "description": "淘A (taoooa.com) 微信公众号广告助手",
+    "homepage_url": "http://www.taoooa.com",
+    "icons": {
+        "16": "static/img/icon_16.png",
+        "48": "static/img/icon_48.png",
+        "128": "static/img/icon_128.png"
+    },
+    "browser_action": {
+        "default_icon": "static/img/icon_16.png",
+        "default_title": "淘A微信公众号广告助手",
+        "default_popup": "index.html"
+    },
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",    
+    "permissions": [
+        "tabs",
+        "cookies",
+        "unlimitedStorage",
+        "http://api.hikingnet.cn/"
+    ],
+    "background": {
+        "scripts": ["background.js"]
+    },
+    "content_scripts":[
+        {
+        "matches": [ 
+            "https://mp.weixin.qq.com/cgi-bin/appmsg?t=media/appmsg_edit*",
+            "https://mp.weixin.qq.com/cgi-bin/masssendpage?t=mass/list&action=history*"
+            ],
+        "js": ["content.js"]
+        }
+    ]
+}

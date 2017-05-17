@@ -32,8 +32,8 @@
         name: 'Login',
         data() {
             return {
-                account: '',
-                password: '',
+                account: '460205899@qq.com',
+                password: '123456',
                 errorMsg: ''
             }
         },
