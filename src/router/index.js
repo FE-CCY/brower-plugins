@@ -7,6 +7,7 @@ import Index from '@/components/Index'
 import api from '@/api'
 Vue.use(Router)
 
+//登录状态验证
 function requireAuth (to, from, next) {
   if (!api.user.auth()) {
     next({

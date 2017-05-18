@@ -287,12 +287,12 @@ App.prototype = {
         },100)
         
         //fuck the xmt
-        setTimeout(function(){
-            var $xmt = $('.xmt-btn-group');
-            if($xmt.length){
-                $xmt.parent().find('.appmsg_container_bd').eq(0).removeAttr('style');
-            }        
-        },800)
+        // setTimeout(function(){
+        //     var $xmt = $('.xmt-btn-group');
+        //     if($xmt.length){
+        //         $xmt.parent().find('.appmsg_container_bd').eq(0).removeAttr('style');
+        //     }        
+        // },800)
 
         return this;
     }

@@ -18,16 +18,16 @@ export default {
             }
         },
         watch:{
-            isLogin:function(val,oldVal){
-                if(val){
-                   // console.log(this.$router)
-                }   
-            }
+            // isLogin:function(val,oldVal){
+            //     if(val){
+            //        // console.log(this.$router)
+            //     }   
+            // }
         },
         computed:{
-            ...mapGetters({
-                isLogin:'isLogin'
-            })
+            // ...mapGetters({
+            //     isLogin:'isLogin'
+            // })
         },
         methods: {
             ...mapActions([
