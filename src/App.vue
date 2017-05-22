@@ -8,7 +8,7 @@
 
 <script>
 import '@/assets/css/reset.css'
-import { mapGetters, mapActions } from 'vuex'
+import { mapActions } from 'vuex'
 export default {
         name: 'app',
         components:{
@@ -16,18 +16,6 @@ export default {
         data() {
             return { 
             }
-        },
-        watch:{
-            // isLogin:function(val,oldVal){
-            //     if(val){
-            //        // console.log(this.$router)
-            //     }   
-            // }
-        },
-        computed:{
-            // ...mapGetters({
-            //     isLogin:'isLogin'
-            // })
         },
         methods: {
             ...mapActions([
@@ -116,7 +104,7 @@ export default {
     .fade-enter-active, .fade-leave-active {
         transition: opacity .2s
     }
-    .fade-enter, .fade-leave-to /* .fade-leave-active in <2.1.8 */ {
+    .fade-enter, .fade-leave-to {
         opacity: 0
     }
 </style>
